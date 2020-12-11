@@ -3,16 +3,16 @@ clear = lambda: os.system('clear')
 
 
 class Client:
-    def _init_(self, rate = int, data = []):
+    def __init__(self, rate = int, data = []):
         self.rate = rate
         self.data = data
 
-    def _str_(self):
+    def __str__(self):
         return str([str(self.rate), str(self.data)])
 
 
 class Buffer:
-    def _init_(self, buffer_size = int, buffer = []):
+    def __init__(self, buffer_size = int, buffer = []):
         self.buffer_size = buffer_size
         self.buffer = buffer
 
@@ -20,7 +20,7 @@ class Buffer:
         if len(self.buffer) == 0:
             return True
 
-    def _str_(self):
+    def __str__(self):
         return str([str(self.buffer_size), str(self.buffer)]);
 
 basestate = True
